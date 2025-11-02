@@ -1,0 +1,46 @@
+name: Build D7A0HO APK (AI Football Intelligence)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install required system packages
+        run: |
+          sudo apt update
+          sudo apt install -y python3-pip git zip unzip openjdk-17-jdk autoconf automake libtool pkg-config libffi-dev libssl-dev libsqlite3-dev zlib1g-dev libjpeg-dev libpng-dev
+
+      - name: Install Buildozer and dependencies
+        run: |
+          pip install --upgrade pip
+          pip install buildozer cython
+          pip install kivy numpy pandas requests scikit-learn beautifulsoup4 matplotlib pillow
+
+      - name: Initialize Buildozer
+        run: |
+          if [ ! -f buildozer.spec ]; then
+            buildozer init
+          fi
+
+      - name: Build the D7A0HO APK
+        run: |
+          buildozer -v android debug
+
+      - name: Upload generated APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: D7A0HO-Football-Intelligence
+          path: bin/*.apk
