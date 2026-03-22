@@ -1,0 +1,71 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - 'services/**'
+      - '.github/workflows/backend-ci.yml'
+  pull_request:
+    paths:
+      - 'services/**'
+
+jobs:
+  product-catalog:
+    name: Product Catalog Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: services/product-catalog
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: pytest tests/ -v
+
+  ai-nutrition:
+    name: AI Nutrition Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: services/ai-nutrition
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: pytest tests/ -v
+
+  docker-build:
+    name: Docker Build Check
+    runs-on: ubuntu-latest
+    needs: [product-catalog, ai-nutrition]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build all services
+        run: docker-compose build
+        working-directory: .
