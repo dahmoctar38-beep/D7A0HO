@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutriScan AI | Early-Stage Mobile Nutrition Product</title>
+    <meta
+      name="description"
+      content="NutriScan AI is an early-stage mobile nutrition product for barcode scanning and AI-assisted food analysis. Request a demo or join early access."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#" class="brand">NutriScan AI</a>
+        <nav class="nav-links">
+          <a href="#highlights">Highlights</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#interest-form" class="btn btn-sm" data-event="hero_cta_clicked" data-cta="nav_request_demo">Request demo</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Early-stage health-tech mobile product</p>
+            <h1>Scan food. Understand nutrition. Make faster health decisions.</h1>
+            <p class="hero-copy">
+              NutriScan AI helps users scan food barcodes, view nutrition details, and get AI-assisted product analysis.
+              This project is currently pre-revenue and positioned for early access validation.
+            </p>
+            <div class="hero-actions">
+              <a href="#interest-form" class="btn" data-event="hero_cta_clicked" data-cta="hero_request_demo">Request demo</a>
+              <a href="#interest-form" class="btn btn-secondary" data-event="hero_cta_clicked" data-cta="hero_join_waitlist">Join waitlist</a>
+              <a href="#interest-form" class="btn btn-ghost" data-event="hero_cta_clicked" data-cta="hero_get_early_access">Get early access</a>
+            </div>
+            <p class="hero-note">
+              Not currently listed as a live store business. Built as a product asset ready for commercialization.
+            </p>
+          </div>
+          <div class="hero-card">
+            <h2>What it does</h2>
+            <ul>
+              <li>Barcode scan to fetch food product details</li>
+              <li>Nutrition facts, ingredients, and allergens view</li>
+              <li>AI-assisted scoring and health-oriented guidance</li>
+              <li>History and favorites for repeat usage</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="highlights">
+        <div class="container">
+          <h2>Key product highlights</h2>
+          <p class="section-intro">
+            NutriScan AI combines mobile UX and backend analysis into one runnable stack for fast iteration.
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Mobile-first UX</h3>
+              <p>Flutter app with scanner, product details, analysis, history, favorites, and profile preferences.</p>
+            </article>
+            <article class="card">
+              <h3>Backend included</h3>
+              <p>FastAPI gateway, product catalog service, and nutrition analysis service with Docker Compose.</p>
+            </article>
+            <article class="card">
+              <h3>Demo-ready flow</h3>
+              <p>Mock mode works out of the box and real API mode is available with the local backend stack.</p>
+            </article>
+            <article class="card">
+              <h3>Acquisition-ready docs</h3>
+              <p>Repository includes buyer docs, gap analysis, handover plan, and data-room starter structure.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="how-it-works">
+        <div class="container">
+          <h2>How it works</h2>
+          <ol class="steps">
+            <li>Open the app and scan a food barcode.</li>
+            <li>Review product details and nutrition facts.</li>
+            <li>View AI-assisted analysis with score and health flags.</li>
+            <li>Save items to history or favorites for later reference.</li>
+          </ol>
+          <p class="section-intro">
+            Built for health-conscious users, diabetic-aware workflows, and operators exploring wellness product opportunities.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="screenshots" data-track-gallery>
+        <div class="container">
+          <h2>Screenshots</h2>
+          <p class="section-intro">
+            Current app UI screenshots from the repository. These prove product implementation, not market traction.
+          </p>
+          <div class="shots-grid">
+            <figure><img src="./assets/screenshots/01-home.png" alt="NutriScan home screen" loading="lazy" /><figcaption>Home</figcaption></figure>
+            <figure><img src="./assets/screenshots/02-product-details.png" alt="NutriScan product details screen" loading="lazy" /><figcaption>Product details</figcaption></figure>
+            <figure><img src="./assets/screenshots/03-ai-analysis.png" alt="NutriScan AI analysis screen" loading="lazy" /><figcaption>AI analysis</figcaption></figure>
+            <figure><img src="./assets/screenshots/07-scanner.png" alt="NutriScan scanner screen" loading="lazy" /><figcaption>Scanner</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="interest-form">
+        <div class="container form-wrap">
+          <div>
+            <h2>Request demo or join early access</h2>
+            <p class="section-intro">
+              This form is the first measurable demand path. Configure a real endpoint in <code>landing/config.js</code>
+              before public launch.
+            </p>
+            <ul class="form-points">
+              <li>CTA click</li>
+              <li>Form start</li>
+              <li>Form submit</li>
+              <li>Confirmation view</li>
+            </ul>
+          </div>
+          <form id="lead-form" class="lead-form">
+            <label>
+              Full name
+              <input type="text" name="full_name" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Interest type
+              <select name="interest_type" required>
+                <option value="">Select one</option>
+                <option value="request_demo">Request demo</option>
+                <option value="join_waitlist">Join waitlist</option>
+                <option value="early_access">Get early access</option>
+              </select>
+            </label>
+            <label>
+              Notes (optional)
+              <textarea name="notes" rows="3" placeholder="Tell us how you plan to use NutriScan AI"></textarea>
+            </label>
+            <button type="submit" class="btn">Submit interest</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <div class="faq-list">
+            <details>
+              <summary>Is NutriScan AI already a live business with customers?</summary>
+              <p>No. It is currently an early-stage product asset and pre-revenue project.</p>
+            </details>
+            <details>
+              <summary>Is the product functional today?</summary>
+              <p>Yes. The repository includes a runnable Flutter app, backend services, and screenshots.</p>
+            </details>
+            <details>
+              <summary>What is still missing for full commercialization?</summary>
+              <p>Real auth, production deployment, analytics in production, legal hardening, and monetization rollout.</p>
+            </details>
+            <details>
+              <summary>How do you measure demand at this stage?</summary>
+              <p>Landing visits, CTA clicks, form starts, form submissions, and confirmation views.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>NutriScan AI is informational and not medical advice.</p>
+        <div class="footer-links">
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="#interest-form">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

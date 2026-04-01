@@ -1,0 +1,20 @@
+[build]
+publish = "landing"
+functions = "landing/functions"
+
+[[redirects]]
+from = "/api/interest"
+to = "/.netlify/functions/interest"
+status = 200
+
+[[redirects]]
+from = "/api/events"
+to = "/.netlify/functions/events"
+status = 200
+
+[[headers]]
+for = "/*"
+  [headers.values]
+  X-Frame-Options = "DENY"
+  X-Content-Type-Options = "nosniff"
+  Referrer-Policy = "strict-origin-when-cross-origin"
